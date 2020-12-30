@@ -1,6 +1,6 @@
-import React from "react"
+import React from "react";
 
-import Hero from "../components/Hero"
+import Hero from "../components/Hero";
 
 const IndexPage = () => {
   return (
@@ -8,7 +8,7 @@ const IndexPage = () => {
       <title>Home Page</title>
       <Hero />
     </main>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;

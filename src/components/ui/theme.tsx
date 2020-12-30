@@ -1,14 +1,14 @@
-import { createGlobalStyle } from "styled-components"
-import reset from 'styled-reset'
+import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 export default {
   colors: {
     primary: {
-      main: "#52BBDE"
+      main: "#52BBDE",
     },
     secondary: {
       main: "#ED726D",
-      dark: "#E66E6A"
+      dark: "#E66E6A",
     },
     white: "#fff",
     black: "#000",
@@ -17,10 +17,10 @@ export default {
     },
     text: {
       primary: "#000",
-      secondary: "#666666"
-    }
-  }
-}
+      secondary: "#666666",
+    },
+  },
+};
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -39,4 +39,4 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     letter-spacing: 0;
   }
-`
+`;
