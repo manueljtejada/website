@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import DarkModeToggle from "../DarkModeToggle";
 
 const StyledList = styled.ul`
   display: flex;
@@ -31,6 +32,9 @@ export default function MenuList({ items }: MenuListProps) {
           <StyledLink to={`/${item.slug}`}>{item.title}</StyledLink>
         </StyledListItem>
       ))}
+      <StyledListItem>
+        <DarkModeToggle />
+      </StyledListItem>
     </StyledList>
   );
 }

@@ -6,16 +6,6 @@ const StyledLogo = styled.div`
   font-size: 1.25rem;
   font-weight: bold;
   position: relative;
-
-  &::after {
-    content: "";
-    width: 50px;
-    height: 6px;
-    background-color: ${({ theme }) => theme.colors.primary.main};
-    position: absolute;
-    left: 0;
-    bottom: -0.75rem;
-  }
 `;
 
 const StyledLink = styled(Link)`
