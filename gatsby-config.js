@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Manuel J. Tejada",
+    description: "FullStack Developer based in Stockholm.",
   },
   plugins: [
     "gatsby-plugin-styled-components",
