@@ -8,6 +8,7 @@ import Hero from "../components/Hero";
 import Menu from "../components/Menu/Menu";
 import { Container, Grid, Box } from "../components/ui/components";
 import { ProjectType } from "../types";
+import Project from "../components/Project";
 
 const MenuContainer = styled.div`
   position: absolute;
@@ -38,13 +39,11 @@ const IndexPage = (props: PageProps<IndexQueryType>) => {
 
           <Grid>
             {projects?.nodes.map((project) => (
-              <Box key={0}>
-                <Img
-                  fluid={project.data.image.fluid}
-                  alt={project.data.image.alt}
-                />
-                {project.data.title.text}
-              </Box>
+              <Project
+                key={project.id}
+                data={project.data}
+                tags={project.tags}
+              />
             ))}
           </Grid>
         </Box>
@@ -59,9 +58,11 @@ export const query = graphql`
   query projects {
     projects: allPrismicProject(
       sort: { order: DESC, fields: data___publication_date }
-      limit: 3
+      limit: 2
     ) {
       nodes {
+        id
+        tags
         data {
           title {
             text

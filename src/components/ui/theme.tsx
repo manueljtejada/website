@@ -3,6 +3,8 @@ import reset from "styled-reset";
 
 const base = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
+  fontFamilySerif: "Merriweather, serif",
+  fontFamilySansSerif: "-apple-system, Roboto, sans-serif",
 };
 
 export const lightTheme = {
@@ -79,6 +81,7 @@ export const GlobalStyle = createGlobalStyle`
   } */
 
   h3 {
+    font-family: ${(props) => props.theme.fontFamilySerif};
     font-size: 2em;
     font-weight: 800;
     line-height: 1.25;
@@ -86,10 +89,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h4 {
+    font-family: ${(props) => props.theme.fontFamilySerif};
     font-size: 1.5em;
-    font-weight: 800;
     line-height: 1.25;
-    margin-bottom: 1.25em;
+    margin-bottom: 0.75rem;
   }
 
   h6 {
