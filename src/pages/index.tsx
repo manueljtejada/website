@@ -22,7 +22,7 @@ type IndexQueryType = {
 
 const IndexPage = (props: PageProps<IndexQueryType>) => {
   const { projects } = props.data;
-  console.log({ projects });
+
   return (
     <main>
       <title>Home Page</title>

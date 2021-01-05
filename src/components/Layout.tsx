@@ -5,6 +5,7 @@ import Helmet from "react-helmet";
 import Footer from "./Footer";
 import Menu from "./Menu/Menu";
 import Container from "./ui/components/Container";
+import { Box } from "./ui/components";
 
 const Layout: React.FC = ({ children, ...rest }) => {
   const data = useStaticQuery(METADATA_QUERY);
@@ -16,7 +17,12 @@ const Layout: React.FC = ({ children, ...rest }) => {
         <title>{title}</title>
         <meta name="description" content={description} />
       </Helmet>
-      <Menu bg="grayLighter" />
+      <Menu bg="accent" />
+      <Box bg="accent" pt="3rem" pb="1rem" mb="2rem">
+        <Container>
+          <h4>Page Title</h4>
+        </Container>
+      </Box>
       <Container>{children}</Container>
       <Footer />
     </>

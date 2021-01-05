@@ -12,6 +12,7 @@ export const lightTheme = {
   colors: {
     primary: "#52BBDE",
     secondary: "#ED726D",
+    accent: "#F3F5F7",
     background: "#fff",
     contrast: "#000",
     grayLight: "#666666",
@@ -24,23 +25,9 @@ export const darkTheme = {
   colors: {
     primary: "#52BBDE",
     secondary: "#ED726D",
-    background: "#201E1E",
+    accent: "#37393a",
+    background: "#37393A",
     contrast: "#fff",
-    grayLight: "#666666",
-    grayLighter: "#F2F2F2",
-  },
-};
-
-export default {
-  colors: {
-    primary: "#52BBDE",
-    secondary: "#ED726D",
-    // secondary: {
-    //   main: "",
-    //   dark: "#E66E6A",
-    // },
-    white: "#fff",
-    black: "#000",
     grayLight: "#666666",
     grayLighter: "#F2F2F2",
   },
@@ -69,20 +56,21 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 4em;
+    font-size: 2.125em;
     font-weight: 600;
-    color: ${(props) => props.theme.colors.secondary};
     line-height: 1.25;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.25em;
   }
 
-  /* h2 {
-
-  } */
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.25;
+    margin-bottom: 1.5em;
+  }
 
   h3 {
     font-family: ${(props) => props.theme.fontFamilySerif};
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: 800;
     line-height: 1.25;
     margin-bottom: 1.25em;
@@ -103,5 +91,14 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 1px;
     margin-bottom: 1em;
     text-transform: uppercase;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 `;

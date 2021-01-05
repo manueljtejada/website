@@ -21,7 +21,7 @@ export default function Footer() {
         <hr />
         <Grid my="2rem">
           <Box>© 2020 Manuel J. Tejada. All rights reserved.</Box>
-          <Box>GitHub Twitter Instagram</Box>
+          <Box style={{ textAlign: "right" }}>GitHub Twitter Instagram</Box>
         </Grid>
       </Container>
       <img src={wave} alt="Red wave graphic" width="100%" height="auto" />

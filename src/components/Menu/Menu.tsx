@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Box } from "../ui/components";
 import Container from "../ui/components/Container";
 import Logo from "./Logo";
 import MenuList from "./MenuList";
@@ -11,7 +12,8 @@ const Grid = styled.div`
 `;
 
 interface MenuProps {
-  siteName: string;
+  siteName?: string;
+  bg?: string;
 }
 
 const pages = [
@@ -21,13 +23,15 @@ const pages = [
   { title: "Blog", slug: "blog" },
 ];
 
-export default function Menu({ siteName = "Manuel J. Tejada" }: MenuProps) {
+export default function Menu({ siteName = "Manuel J. Tejada", bg }: MenuProps) {
   return (
-    <Container>
-      <Grid>
-        <Logo siteName="Manuel J. Tejada" />
-        <MenuList items={pages} />
-      </Grid>
-    </Container>
+    <Box bg={bg}>
+      <Container>
+        <Grid>
+          <Logo siteName={siteName} />
+          <MenuList items={pages} />
+        </Grid>
+      </Container>
+    </Box>
   );
 }

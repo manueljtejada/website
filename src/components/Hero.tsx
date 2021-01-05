@@ -21,8 +21,9 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 4rem;
+  font-size: 4em;
   font-weight: 600;
+  color: ${(props) => props.theme.colors.secondary};
   line-height: 1.25;
   margin-bottom: 1.25rem;
 `;
