@@ -7,6 +7,12 @@
         "label" : "Title"
       }
     },
+    "uid" : {
+      "type" : "UID",
+      "config" : {
+        "label" : "Slug"
+      }
+    },
     "content" : {
       "type" : "StructuredText",
       "config" : {
