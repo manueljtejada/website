@@ -6,10 +6,10 @@ import Footer from "./Footer";
 import Menu from "./Menu/Menu";
 import Container from "./ui/components/Container";
 import { Box } from "./ui/components";
+import useMetadata from "../hooks/useMetadata";
 
 const Layout: React.FC = ({ children, ...rest }) => {
-  const data = useStaticQuery(METADATA_QUERY);
-  const { title, description } = data.site.siteMetadata;
+  const { title, description, socialLinks } = useMetadata();
 
   return (
     <>
@@ -24,20 +24,9 @@ const Layout: React.FC = ({ children, ...rest }) => {
         </Container>
       </Box>
       <Container>{children}</Container>
-      <Footer />
+      <Footer socialLinks={socialLinks} />
     </>
   );
 };
-
-const METADATA_QUERY = graphql`
-  query MetadataQuery {
-    site {
-      siteMetadata {
-        title
-        description
-      }
-    }
-  }
-`;
 
 export default Layout;

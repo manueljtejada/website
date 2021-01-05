@@ -8,6 +8,8 @@ import Menu from "../components/Menu/Menu";
 import { Container, Grid, Box } from "../components/ui/components";
 import { ProjectType } from "../types";
 import Project from "../components/Project";
+import useMetadata from "../hooks/useMetadata";
+import { Helmet } from "react-helmet";
 
 const MenuContainer = styled.div`
   position: absolute;
@@ -22,10 +24,14 @@ type IndexQueryType = {
 
 const IndexPage = (props: PageProps<IndexQueryType>) => {
   const { projects } = props.data;
+  const { title, description, socialLinks } = useMetadata();
 
   return (
     <main>
-      <title>Home Page</title>
+      <Helmet>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+      </Helmet>
       <MenuContainer>
         <Menu />
       </MenuContainer>
@@ -49,7 +55,7 @@ const IndexPage = (props: PageProps<IndexQueryType>) => {
         </Box>
       </Container>
 
-      <Footer />
+      <Footer socialLinks={socialLinks} />
     </main>
   );
 };

@@ -2,6 +2,20 @@ module.exports = {
   siteMetadata: {
     title: "Manuel J. Tejada",
     description: "FullStack Developer based in Stockholm.",
+    socialLinks: [
+      {
+        profile: "GitHub",
+        url: "https://github.com/manueljtejada",
+      },
+      {
+        profile: "Twitter",
+        url: "https://twitter.com/manueljtejada",
+      },
+      {
+        profile: "Instagram",
+        url: "https://instagram.com/manueljtejada",
+      },
+    ],
   },
   plugins: [
     "gatsby-plugin-styled-components",
