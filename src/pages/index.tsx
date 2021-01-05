@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { graphql, PageProps } from "gatsby";
-import Img from "gatsby-image";
 import Footer from "../components/Footer";
 
 import Hero from "../components/Hero";
@@ -41,6 +40,7 @@ const IndexPage = (props: PageProps<IndexQueryType>) => {
             {projects?.nodes.map((project) => (
               <Project
                 key={project.id}
+                slug={project.uid}
                 data={project.data}
                 tags={project.tags}
               />
@@ -63,6 +63,7 @@ export const query = graphql`
       nodes {
         id
         tags
+        uid
         data {
           title {
             text
