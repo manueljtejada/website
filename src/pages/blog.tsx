@@ -1,22 +1,28 @@
 import { graphql, PageProps } from "gatsby";
 import React from "react";
 import BlogPostListItem from "../components/BlogPostListItem";
+import PageHeader from "../components/PageHeader";
+import { Container } from "../components/ui/components";
 import { BlogPostType, PrimsicAllQueryType } from "../types";
 
 const BlogPage = ({
   data,
 }: PageProps<{ posts: PrimsicAllQueryType<BlogPostType> }>) => {
   return (
-    <main>
-      {data.posts.nodes.map((post) => (
-        <BlogPostListItem
-          key={post.id}
-          slug={post.uid}
-          data={post.data}
-          date={post.first_publication_date}
-        />
-      ))}
-    </main>
+    <>
+      <PageHeader title="Blog" />
+      <Container>
+        {data.posts.nodes.map((post) => (
+          <BlogPostListItem
+            key={post.id}
+            slug={post.uid}
+            data={post.data}
+            date={post.first_publication_date}
+            tags={post.tags}
+          />
+        ))}
+      </Container>
+    </>
   );
 };
 
@@ -26,9 +32,13 @@ export const query = graphql`
       nodes {
         id
         uid
+        tags
         first_publication_date
         data {
           title {
+            text
+          }
+          content {
             text
           }
         }
