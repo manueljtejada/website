@@ -4,17 +4,17 @@ import reset from "styled-reset";
 const base = {
   space: [0, 4, 8, 16, 32, 64, 128, 256, 512],
   fontFamilySerif: "Merriweather, serif",
-  fontFamilySansSerif: "-apple-system, Roboto, sans-serif",
+  fontFamilySansSerif: "Gilroy, 'Helvetica Neue', Roboto, sans-serif",
 };
 
 export const lightTheme = {
   ...base,
   colors: {
-    primary: "#52BBDE",
-    secondary: "#ED726D",
+    primary: "#ED726D",
     accent: "#F3F5F7",
     background: "#fff",
-    contrast: "#000",
+    contrast: "#0F1020",
+    gray: "#3f3f3f",
     grayLight: "#666666",
     grayLighter: "#F2F2F2",
   },
@@ -23,13 +23,12 @@ export const lightTheme = {
 export const darkTheme = {
   ...base,
   colors: {
-    primary: "#52BBDE",
-    secondary: "#ED726D",
-    accent: "#37393a",
-    background: "#37393A",
-    contrast: "#fff",
-    grayLight: "#666666",
-    grayLighter: "#F2F2F2",
+    primary: "#ED726D",
+    accent: "#0C0D1A",
+    background: "#0F1020",
+    contrast: "#EFF1F3",
+    grayLight: "#989aaf",
+    grayLighter: "#07080f",
   },
 };
 
@@ -42,7 +41,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    font-family: -apple-system, Roboto, sans-serif, serif;
+    font-family: ${(props) => props.theme.fontFamilySansSerif};
     font-size: 16px;
   }
 
@@ -64,6 +63,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: 1.5em;
+    font-weight: 600;
     line-height: 1.25;
     margin-bottom: 1.5em;
   }
@@ -84,11 +84,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h6 {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 0.875em;
     font-weight: bold;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
     margin-bottom: 1em;
     text-transform: uppercase;
   }

@@ -13,7 +13,7 @@ const StyledListItem = styled.li`
 `;
 
 const StyledLink = styled(Link)`
-  color: inherit;
+  color: ${(props) => props.theme.colors.gray};
   text-decoration: none;
 `;
 

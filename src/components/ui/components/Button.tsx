@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const Button = styled.button`
-  color: ${(props) => props.theme.colors.white};
-  border: 4px solid ${(props) => props.theme.colors.secondary};
-  background: ${(props) => props.theme.colors.secondary};
+  color: #fff;
+  border: 4px solid ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.colors.primary};
   font-size: 1rem;
   padding: 0.5em 1.5em;
   border-radius: 3px;
@@ -11,7 +11,7 @@ const Button = styled.button`
   transition: all 0.2s;
 
   &:hover {
-    background: ${(props) => props.theme.colors.secondary};
+    background: ${(props) => props.theme.colors.primary};
     cursor: pointer;
     transition: all 0.2s;
   }

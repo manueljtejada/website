@@ -23,7 +23,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-size: 4em;
   font-weight: 600;
-  color: ${(props) => props.theme.colors.secondary};
+  color: ${(props) => props.theme.colors.primary};
   line-height: 1.25;
   margin-bottom: 1.25rem;
 `;
@@ -49,7 +49,7 @@ export default function Hero() {
     <Wrapper>
       <Container>
         <div>
-          <Title>Hey, I&apos;m Manuel</Title>
+          <Title>Hey, I&apos;m Manuel.</Title>
           <Content>
             I am a Full-Stack JavaScript Developer from the Dominican Republic
             with 7 years of experience. I have a passion for designing
